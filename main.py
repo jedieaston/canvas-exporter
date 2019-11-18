@@ -1,7 +1,15 @@
 from canvasapi import Canvas
 import modules.auth as auth
 
-canvasInstance = Canvas(auth.url, auth.key)
+if(auth.url == "" or auth.key == ""):
+    raise Exception("You didn't put your Canvas URL or API key in modules/auth.py. Heck! You'll have to fix that and then come back here.")
+    exit()
+# initialize canvas!
+try:
+    canvasInstance = Canvas(auth.url, auth.key)
+except: 
+    print("We couldn't connect to Canvas. Check what you put in modules/auth.py and try again.")
+    exit()
 
 # get the currentUser.
 
