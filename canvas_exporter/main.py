@@ -1,8 +1,15 @@
 from canvasapi import Canvas
-import modules.auth as auth
+try:
+    import modules.auth as auth
+except:
+    with open('modules/auth.py', 'w+') as f:
+        # No auth py!
+        f.writelines([('url = ""\n'), ('key = ""')])
+        print("Fill in modules/auth.py and run this again!")
+        exit()
 
 if(auth.url == "" or auth.key == ""):
-    raise Exception("You didn't put your Canvas URL or API key in modules/auth.py. Heck! You'll have to fix that and then come back here.")
+    print("You didn't put your Canvas URL or API key in modules/auth.py. Heck! You'll have to fix that and then come back here.")
     exit()
 # initialize canvas!
 try:

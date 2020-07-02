@@ -1,3 +1,4 @@
 *__pycache__/*
 canvas_exporter/__pycache__/*
-auth.py
+canvas_exporter/modules/auth.py
+*.pyc
