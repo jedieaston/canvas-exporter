@@ -1,2 +1,3 @@
-__pycache__/*
+*__pycache__/*
+canvas_exporter/__pycache__/*
 auth.py
