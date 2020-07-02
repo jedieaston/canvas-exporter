@@ -4,7 +4,7 @@ try:
 except:
     with open('modules/auth.py', 'w+') as f:
         # No auth py!
-        f.writelines([('url = ""\n'), ('key = ""')])
+        f.writelines([('url = ""\n'), ('key = ""\n')])
         print("Fill in modules/auth.py and run this again!")
         exit()
 
